@@ -1,0 +1,1516 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teoria Matematica - Preparazione INVALSI Classe Quinta</title>
+    
+    <!-- MathJax Configuration -->
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$']],
+                displayMath: [['$$', '$$']],
+                processEscapes: true
+            }
+        };
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+            overflow: hidden;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px 30px;
+            text-align: center;
+        }
+        
+        .header h1 {
+            font-size: 32px;
+            margin-bottom: 10px;
+        }
+        
+        .header p {
+            font-size: 18px;
+            opacity: 0.9;
+        }
+        
+        .content {
+            padding: 40px;
+            animation: fadeIn 0.5s;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .theory-section {
+            background: #f8f9fa;
+            padding: 30px;
+            margin-bottom: 30px;
+            border-radius: 10px;
+            border-left: 6px solid #28a745;
+            box-shadow: 0 3px 15px rgba(0,0,0,0.1);
+        }
+        
+        .theory-section h3 {
+            color: #28a745;
+            margin-bottom: 25px;
+            font-size: 26px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .theory-section h4 {
+            color: #495057;
+            margin-top: 25px;
+            margin-bottom: 15px;
+            font-size: 20px;
+            border-bottom: 2px solid #dee2e6;
+            padding-bottom: 8px;
+        }
+        
+        .formula {
+            background: white;
+            padding: 20px;
+            margin: 15px 0;
+            border-radius: 8px;
+            text-align: center;
+            border: 2px solid #dee2e6;
+            font-size: 17px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+        
+        .theory-section ul {
+            margin-left: 30px;
+            margin-top: 10px;
+        }
+        
+        .theory-section li {
+            margin: 12px 0;
+            line-height: 1.8;
+        }
+        
+        .theory-section p {
+            margin: 15px 0;
+            line-height: 1.8;
+        }
+        
+        table {
+            margin: 25px auto;
+            border-collapse: collapse;
+            background: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            width: 100%;
+            max-width: 900px;
+        }
+        
+        table th, table td {
+            padding: 15px;
+            border: 1px solid #dee2e6;
+            text-align: center;
+        }
+        
+        table th {
+            background: #667eea;
+            color: white;
+            font-weight: bold;
+            font-size: 16px;
+        }
+        
+        table tr:nth-child(even) {
+            background: #f8f9fa;
+        }
+        
+        table tr:hover {
+            background: #e7f3ff;
+        }
+        
+        strong {
+            color: #495057;
+        }
+        
+        .highlight {
+            background: #fff3cd;
+            padding: 2px 6px;
+            border-radius: 3px;
+        }
+        
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+            
+            .header {
+                background: #667eea;
+                print-color-adjust: exact;
+                -webkit-print-color-adjust: exact;
+            }
+            
+            .theory-section {
+                page-break-inside: avoid;
+                border-left-color: #28a745;
+                print-color-adjust: exact;
+                -webkit-print-color-adjust: exact;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .content {
+                padding: 20px;
+            }
+            
+            .theory-section {
+                padding: 20px;
+            }
+            
+            .header h1 {
+                font-size: 24px;
+            }
+            
+            table {
+                font-size: 14px;
+            }
+            
+            table th, table td {
+                padding: 10px 5px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>📚 Teoria Matematica</h1>
+            <p>Preparazione Prove INVALSI - Classe Quinta Superiore</p>
+        </div>
+        
+        <div class="content">
+            
+            <div class="theory-section">
+                <h3>📐 Geometria Analitica</h3>
+                
+                <h4>Retta nel piano cartesiano</h4>
+                <div class="formula">
+                    <strong>Forma esplicita:</strong> $y = mx + q$
+                    <br>dove $m$ = coefficiente angolare, $q$ = intercetta sull'asse $y$
+                </div>
+                
+                <div class="formula">
+                    <strong>Coefficiente angolare:</strong> $m = \dfrac{\Delta y}{\Delta x} = \dfrac{y_2 - y_1}{x_2 - x_1}$
+                </div>
+                
+                <div class="formula">
+                    <strong>Forma implicita:</strong> $ax + by + c = 0$
+                </div>
+                
+                <div class="formula">
+                    <strong>Equazione retta per due punti:</strong> $\dfrac{y - y_1}{y_2 - y_1} = \dfrac{x - x_1}{x_2 - x_1}$
+                </div>
+                
+                <ul>
+                    <li><strong>Rette parallele:</strong> Hanno lo stesso coefficiente angolare: $m_1 = m_2$</li>
+                    <li><strong>Rette perpendicolari:</strong> Il prodotto dei coefficienti angolari è $-1$: $m_1 \cdot m_2 = -1$</li>
+                    <li><strong>Retta orizzontale:</strong> $y = k$ (coefficiente angolare $m = 0$)</li>
+                    <li><strong>Retta verticale:</strong> $x = k$ (coefficiente angolare non definito)</li>
+                    <li><strong>Distanza punto-retta:</strong> $d = \dfrac{|ax_0 + by_0 + c|}{\sqrt{a^2 + b^2}}$</li>
+                    <li><strong>Distanza tra due punti:</strong> $d = \sqrt{(x_2 - x_1)^2 + (y_2 - y_1)^2}$</li>
+                </ul>
+                
+                <h4>Circonferenza</h4>
+                <div class="formula">
+                    <strong>Equazione:</strong> $(x - x_C)^2 + (y - y_C)^2 = r^2$
+                    <br>Centro: $C(x_C, y_C)$, Raggio: $r$
+                </div>
+                
+                <div class="formula">
+                    <strong>Forma estesa:</strong> $x^2 + y^2 + ax + by + c = 0$
+                    <br>Centro: $C\left(-\dfrac{a}{2}, -\dfrac{b}{2}\right)$
+                    <br>Raggio: $r = \sqrt{\dfrac{a^2}{4} + \dfrac{b^2}{4} - c}$
+                </div>
+                
+                <ul>
+                    <li><strong>Posizione retta-circonferenza:</strong>
+                        <ul>
+                            <li>Secante: $d < r$ (due punti di intersezione)</li>
+                            <li>Tangente: $d = r$ (un punto di intersezione)</li>
+                            <li>Esterna: $d > r$ (nessun punto di intersezione)</li>
+                        </ul>
+                    </li>
+                </ul>
+                
+                <h4>Parabola</h4>
+                <div class="formula">
+                    <strong>Asse verticale:</strong> $y = ax^2 + bx + c$
+                    <br>Vertice: $V\left(-\dfrac{b}{2a}, -\dfrac{\Delta}{4a}\right)$ dove $\Delta = b^2 - 4ac$
+                </div>
+                
+                <div class="formula">
+                    <strong>Asse orizzontale:</strong> $x = ay^2 + by + c$
+                </div>
+                
+                <ul>
+                    <li><strong>Concavità:</strong> 
+                        <ul>
+                            <li>$a > 0$ → parabola rivolta verso l'alto (concavità verso l'alto)</li>
+                            <li>$a < 0$ → parabola rivolta verso il basso (concavità verso il basso)</li>
+                        </ul>
+                    </li>
+                    <li><strong>Asse di simmetria:</strong> $x = -\dfrac{b}{2a}$</li>
+                    <li><strong>Fuoco:</strong> $F\left(-\dfrac{b}{2a}, -\dfrac{\Delta - 1}{4a}\right)$</li>
+                    <li><strong>Direttrice:</strong> $y = -\dfrac{\Delta + 1}{4a}$</li>
+                </ul>
+                
+                <h4>Ellisse</h4>
+                <div class="formula">
+                    <strong>Equazione canonica (centro nell'origine):</strong> $\dfrac{x^2}{a^2} + \dfrac{y^2}{b^2} = 1$
+                    <br>Semiasse maggiore: $a$ (se $a > b$), Semiasse minore: $b$
+                </div>
+                
+                <div class="formula">
+                    <strong>Eccentricità:</strong> $e = \dfrac{c}{a}$ dove $c = \sqrt{a^2 - b^2}$
+                </div>
+                
+                <ul>
+                    <li><strong>Fuochi:</strong> $F_1(-c, 0)$ e $F_2(c, 0)$ (se $a > b$)</li>
+                    <li><strong>Proprietà focale:</strong> $\overline{PF_1} + \overline{PF_2} = 2a$ per ogni punto $P$ dell'ellisse</li>
+                </ul>
+                
+                <h4>Iperbole</h4>
+                <div class="formula">
+                    <strong>Asse trasverso orizzontale:</strong> $\dfrac{x^2}{a^2} - \dfrac{y^2}{b^2} = 1$
+                </div>
+                
+                <div class="formula">
+                    <strong>Asse trasverso verticale:</strong> $\dfrac{y^2}{b^2} - \dfrac{x^2}{a^2} = 1$
+                </div>
+                
+                <div class="formula">
+                    <strong>Iperbole equilatera:</strong> $xy = k$ oppure $x^2 - y^2 = a^2$
+                </div>
+                
+                <ul>
+                    <li><strong>Asintoti:</strong> $y = \pm\dfrac{b}{a}x$</li>
+                    <li><strong>Fuochi:</strong> $F_1(-c, 0)$ e $F_2(c, 0)$ dove $c = \sqrt{a^2 + b^2}$</li>
+                    <li><strong>Eccentricità:</strong> $e = \dfrac{c}{a} > 1$</li>
+                </ul>
+            </div>
+            
+            <div class="theory-section">
+                <h3>📊 Funzioni</h3>
+                
+                <h4>Definizioni fondamentali</h4>
+                <ul>
+                    <li><strong>Funzione:</strong> Relazione che associa ad ogni elemento $x$ del dominio uno e un solo elemento $y$ del codominio</li>
+                    <li><strong>Dominio (campo di esistenza):</strong> Insieme dei valori di $x$ per cui la funzione è definita</li>
+                    <li><strong>Codominio:</strong> Insieme in cui la funzione assume valori</li>
+                    <li><strong>Immagine:</strong> Insieme dei valori effettivamente assunti dalla funzione</li>
+                    <li><strong>Funzione iniettiva:</strong> Elementi diversi del dominio hanno immagini diverse</li>
+                    <li><strong>Funzione suriettiva:</strong> Ogni elemento del codominio è immagine di almeno un elemento del dominio</li>
+                    <li><strong>Funzione biunivoca (o biiettiva):</strong> Sia iniettiva che suriettiva</li>
+                </ul>
+                
+                <h4>Funzioni elementari</h4>
+                <table>
+                    <tr>
+                        <th>Funzione</th>
+                        <th>Forma</th>
+                        <th>Dominio</th>
+                        <th>Codominio</th>
+                    </tr>
+                    <tr>
+                        <td>Lineare</td>
+                        <td>$f(x) = mx + q$</td>
+                        <td>$\mathbb{R}$</td>
+                        <td>$\mathbb{R}$</td>
+                    </tr>
+                    <tr>
+                        <td>Quadratica</td>
+                        <td>$f(x) = ax^2 + bx + c$</td>
+                        <td>$\mathbb{R}$</td>
+                        <td>$[y_V, +\infty)$ o $(-\infty, y_V]$</td>
+                    </tr>
+                    <tr>
+                        <td>Potenza (n pari)</td>
+                        <td>$f(x) = x^n$</td>
+                        <td>$\mathbb{R}$</td>
+                        <td>$[0, +\infty)$</td>
+                    </tr>
+                    <tr>
+                        <td>Potenza (n dispari)</td>
+                        <td>$f(x) = x^n$</td>
+                        <td>$\mathbb{R}$</td>
+                        <td>$\mathbb{R}$</td>
+                    </tr>
+                    <tr>
+                        <td>Radice quadrata</td>
+                        <td>$f(x) = \sqrt{x}$</td>
+                        <td>$[0, +\infty)$</td>
+                        <td>$[0, +\infty)$</td>
+                    </tr>
+                    <tr>
+                        <td>Valore assoluto</td>
+                        <td>$f(x) = |x|$</td>
+                        <td>$\mathbb{R}$</td>
+                        <td>$[0, +\infty)$</td>
+                    </tr>
+                    <tr>
+                        <td>Reciproca</td>
+                        <td>$f(x) = \dfrac{1}{x}$</td>
+                        <td>$\mathbb{R} \setminus \{0\}$</td>
+                        <td>$\mathbb{R} \setminus \{0\}$</td>
+                    </tr>
+                    <tr>
+                        <td>Esponenziale</td>
+                        <td>$f(x) = a^x$ ($a > 0, a \neq 1$)</td>
+                        <td>$\mathbb{R}$</td>
+                        <td>$(0, +\infty)$</td>
+                    </tr>
+                    <tr>
+                        <td>Logaritmica</td>
+                        <td>$f(x) = \log_a(x)$</td>
+                        <td>$(0, +\infty)$</td>
+                        <td>$\mathbb{R}$</td>
+                    </tr>
+                </table>
+                
+                <h4>Proprietà delle funzioni</h4>
+                <ul>
+                    <li><strong>Funzione pari:</strong> $f(-x) = f(x)$ per ogni $x$ (grafico simmetrico rispetto all'asse $y$)</li>
+                    <li><strong>Funzione dispari:</strong> $f(-x) = -f(x)$ per ogni $x$ (grafico simmetrico rispetto all'origine)</li>
+                    <li><strong>Funzione crescente in un intervallo:</strong> Se $x_1 < x_2$ allora $f(x_1) < f(x_2)$</li>
+                    <li><strong>Funzione decrescente in un intervallo:</strong> Se $x_1 < x_2$ allora $f(x_1) > f(x_2)$</li>
+                    <li><strong>Funzione monotòna:</strong> Crescente o decrescente</li>
+                    <li><strong>Funzione periodica:</strong> $f(x + T) = f(x)$ per ogni $x$ ($T$ = periodo)</li>
+                </ul>
+                
+                <h4>Limiti</h4>
+                <p><strong>Definizione intuitiva:</strong> $\lim_{x \to x_0} f(x) = L$ se $f(x)$ si avvicina a $L$ quando $x$ si avvicina a $x_0$</p>
+                
+                <p><strong>Limiti notevoli:</strong></p>
+                <div class="formula">
+                    $\lim_{x \to 0} \dfrac{\sin x}{x} = 1$
+                </div>
+                <div class="formula">
+                    $\lim_{x \to 0} \dfrac{1 - \cos x}{x^2} = \dfrac{1}{2}$
+                </div>
+                <div class="formula">
+                    $\lim_{x \to +\infty} \left(1 + \dfrac{1}{x}\right)^x = e$
+                </div>
+                <div class="formula">
+                    $\lim_{x \to 0} \dfrac{e^x - 1}{x} = 1$
+                </div>
+                <div class="formula">
+                    $\lim_{x \to 0} \dfrac{\ln(1 + x)}{x} = 1$
+                </div>
+                
+                <h4>Continuità</h4>
+                <p>Una funzione $f(x)$ è <strong>continua</strong> in $x_0$ se:</p>
+                <div class="formula">
+                    1. $f(x_0)$ esiste<br>
+                    2. $\lim_{x \to x_0} f(x)$ esiste<br>
+                    3. $\lim_{x \to x_0} f(x) = f(x_0)$
+                </div>
+                
+                <p><strong>Tipi di discontinuità:</strong></p>
+                <ul>
+                    <li><strong>I specie (salto):</strong> Esistono $\lim_{x \to x_0^-} f(x)$ e $\lim_{x \to x_0^+} f(x)$ ma sono diversi</li>
+                    <li><strong>II specie:</strong> Almeno uno dei due limiti non esiste o è infinito</li>
+                    <li><strong>III specie (eliminabile):</strong> Esiste $\lim_{x \to x_0} f(x) = L$ ma $L \neq f(x_0)$ oppure $f(x_0)$ non esiste</li>
+                </ul>
+                
+                <h4>Asintoti</h4>
+                <ul>
+                    <li><strong>Asintoto verticale</strong> $x = x_0$: se $\lim_{x \to x_0} f(x) = \pm\infty$</li>
+                    <li><strong>Asintoto orizzontale</strong> $y = k$: se $\lim_{x \to \pm\infty} f(x) = k$</li>
+                    <li><strong>Asintoto obliquo</strong> $y = mx + q$: se $m = \lim_{x \to \pm\infty} \dfrac{f(x)}{x}$ e $q = \lim_{x \to \pm\infty} [f(x) - mx]$</li>
+                </ul>
+                
+                <h4>Derivate</h4>
+                <p><strong>Definizione:</strong></p>
+                <div class="formula">
+                    $f'(x_0) = \lim_{h \to 0} \dfrac{f(x_0 + h) - f(x_0)}{h}$
+                </div>
+                
+                <p><strong>Significato geometrico:</strong> La derivata rappresenta il coefficiente angolare della retta tangente al grafico nel punto $(x_0, f(x_0))$</p>
+                
+                <p><strong>Derivate fondamentali:</strong></p>
+                <table>
+                    <tr>
+                        <th>$f(x)$</th>
+                        <th>$f'(x)$</th>
+                    </tr>
+                    <tr>
+                        <td>$k$ (costante)</td>
+                        <td>$0$</td>
+                    </tr>
+                    <tr>
+                        <td>$x^n$</td>
+                        <td>$nx^{n-1}$</td>
+                    </tr>
+                    <tr>
+                        <td>$\sqrt{x}$</td>
+                        <td>$\dfrac{1}{2\sqrt{x}}$</td>
+                    </tr>
+                    <tr>
+                        <td>$\dfrac{1}{x}$</td>
+                        <td>$-\dfrac{1}{x^2}$</td>
+                    </tr>
+                    <tr>
+                        <td>$e^x$</td>
+                        <td>$e^x$</td>
+                    </tr>
+                    <tr>
+                        <td>$a^x$</td>
+                        <td>$a^x \ln a$</td>
+                    </tr>
+                    <tr>
+                        <td>$\ln x$</td>
+                        <td>$\dfrac{1}{x}$</td>
+                    </tr>
+                    <tr>
+                        <td>$\log_a x$</td>
+                        <td>$\dfrac{1}{x \ln a}$</td>
+                    </tr>
+                    <tr>
+                        <td>$\sin x$</td>
+                        <td>$\cos x$</td>
+                    </tr>
+                    <tr>
+                        <td>$\cos x$</td>
+                        <td>$-\sin x$</td>
+                    </tr>
+                    <tr>
+                        <td>$\tan x$</td>
+                        <td>$\dfrac{1}{\cos^2 x} = 1 + \tan^2 x$</td>
+                    </tr>
+                </table>
+                
+                <p><strong>Regole di derivazione:</strong></p>
+                <ul>
+                    <li><strong>Somma:</strong> $[f(x) + g(x)]' = f'(x) + g'(x)$</li>
+                    <li><strong>Prodotto per costante:</strong> $[kf(x)]' = kf'(x)$</li>
+                    <li><strong>Prodotto:</strong> $[f(x) \cdot g(x)]' = f'(x)g(x) + f(x)g'(x)$</li>
+                    <li><strong>Quoziente:</strong> $\left[\dfrac{f(x)}{g(x)}\right]' = \dfrac{f'(x)g(x) - f(x)g'(x)}{[g(x)]^2}$</li>
+                    <li><strong>Funzione composta:</strong> $[f(g(x))]' = f'(g(x)) \cdot g'(x)$</li>
+                </ul>
+                
+                <h4>Studio di funzione - Schema completo</h4>
+                <ol>
+                    <li><strong>Determinare il dominio</strong> (campo di esistenza)</li>
+                    <li><strong>Studiare il segno</strong> della funzione (positività)</li>
+					<li><strong>Intersezione con gli assi</strong> ponendo prima x=0 (intersezione con asse y) e poi y=0 (intersezione con asse x)</li>
+                    <li><strong>Ricercare eventuali simmetrie</strong> (funzioni pari/dispari/periodiche)</li>
+                    <li><strong>Calcolare i limiti</strong> agli estremi del dominio e nei punti di discontinuità</li>
+                    <li><strong>Trovare gli asintoti</strong> (verticali, orizzontali, obliqui)</li>
+                    <li><strong>Calcolare la derivata prima</strong> $f'(x)$</li>
+                    <li><strong>Studiare il segno di $f'(x)$</strong> (intervalli di crescenza e decrescenza)</li>
+                    <li><strong>Trovare i punti di massimo e minimo</strong> (relativi e assoluti)</li>
+                    <li><strong>Calcolare la derivata seconda</strong> $f''(x)$</li>
+                    <li><strong>Studiare il segno di $f''(x)$</strong> (concavità e convessità)</li>
+                    <li><strong>Trovare i punti di flesso</strong></li>
+                    <li><strong>Tracciare il grafico</strong> qualitativo della funzione</li>
+                </ol>
+                
+                <h4>Punti notevoli</h4>
+                <ul>
+                    <li><strong>Massimo relativo:</strong> $f'(x_0) = 0$ e $f''(x_0) < 0$ (oppure $f'$ cambia da + a -)</li>
+                    <li><strong>Minimo relativo:</strong> $f'(x_0) = 0$ e $f''(x_0) > 0$ (oppure $f'$ cambia da - a +)</li>
+                    <li><strong>Punto di flesso:</strong> $f''(x_0) = 0$ e $f''$ cambia segno (punto in cui cambia la concavità)</li>
+                </ul>
+            </div>
+            
+            <div class="theory-section">
+                <h3>∫ Calcolo Integrale</h3>
+                
+                <h4>Integrale indefinito (Primitiva)</h4>
+                <p>L'<strong>integrale indefinito</strong> di $f(x)$ è una funzione $F(x)$ tale che $F'(x) = f(x)$</p>
+                <div class="formula">
+                    $\int f(x)dx = F(x) + c$
+                    <br>dove $c$ è una costante arbitraria
+                </div>
+                
+                <h4>Integrali immediati</h4>
+                <table>
+                    <tr>
+                        <th>$f(x)$</th>
+                        <th>$\int f(x)dx$</th>
+                    </tr>
+                    <tr>
+                        <td>$k$ (costante)</td>
+                        <td>$kx + c$</td>
+                    </tr>
+                    <tr>
+                        <td>$x^n$ ($n \neq -1$)</td>
+                        <td>$\dfrac{x^{n+1}}{n+1} + c$</td>
+                    </tr>
+                    <tr>
+                        <td>$\dfrac{1}{x}$</td>
+                        <td>$\ln|x| + c$</td>
+                    </tr>
+                    <tr>
+                        <td>$e^x$</td>
+                        <td>$e^x + c$</td>
+                    </tr>
+                    <tr>
+                        <td>$a^x$</td>
+                        <td>$\dfrac{a^x}{\ln a} + c$</td>
+                    </tr>
+                    <tr>
+                        <td>$\sin x$</td>
+                        <td>$-\cos x + c$</td>
+                    </tr>
+                    <tr>
+                        <td>$\cos x$</td>
+                        <td>$\sin x + c$</td>
+                    </tr>
+                    <tr>
+                        <td>$\dfrac{1}{\cos^2 x}$</td>
+                        <td>$\tan x + c$</td>
+                    </tr>
+                    <tr>
+                        <td>$\dfrac{1}{\sin^2 x}$</td>
+                        <td>$-\cot x + c$</td>
+                    </tr>
+                    <tr>
+                        <td>$\dfrac{1}{\sqrt{1-x^2}}$</td>
+                        <td>$\arcsin x + c$</td>
+                    </tr>
+                    <tr>
+                        <td>$\dfrac{1}{1+x^2}$</td>
+                        <td>$\arctan x + c$</td>
+                    </tr>
+                </table>
+                
+                <h4>Proprietà dell'integrale indefinito</h4>
+                <ul>
+                    <li><strong>Linearità:</strong> $\int [kf(x) + hg(x)]dx = k\int f(x)dx + h\int g(x)dx$</li>
+                    <li><strong>Integrale della derivata:</strong> $\int f'(x)dx = f(x) + c$</li>
+                </ul>
+                
+                <h4>Integrale definito</h4>
+                <p><strong>Teorema fondamentale del calcolo integrale:</strong></p>
+                <div class="formula">
+                    $\int_a^b f(x)dx = F(b) - F(a) = [F(x)]_a^b$
+                    <br>dove $F(x)$ è una primitiva di $f(x)$
+                </div>
+                
+                <h4>Proprietà degli integrali definiti</h4>
+                <ul>
+                    <li><strong>Linearità:</strong> $\int_a^b [kf(x) + hg(x)]dx = k\int_a^b f(x)dx + h\int_a^b g(x)dx$</li>
+                    <li><strong>Additività:</strong> $\int_a^b f(x)dx + \int_b^c f(x)dx = \int_a^c f(x)dx$</li>
+                    <li><strong>Cambio di segno:</strong> $\int_a^b f(x)dx = -\int_b^a f(x)dx$</li>
+                    <li><strong>Integrale nullo:</strong> $\int_a^a f(x)dx = 0$</li>
+                    <li><strong>Monotonia:</strong> Se $f(x) \leq g(x)$ in $[a,b]$, allora $\int_a^b f(x)dx \leq \int_a^b g(x)dx$</li>
+                </ul>
+                
+                <h4>Integrale e area</h4>
+                <ul>
+                    <li>Se $f(x) \geq 0$ in $[a, b]$: $\int_a^b f(x)dx$ rappresenta l'area tra il grafico e l'asse $x$</li>
+                    <li>Se $f(x) \leq 0$ in $[a, b]$: $\int_a^b f(x)dx$ è negativo (area algebrica con segno -)</li>
+                    <li><strong>Area geometrica:</strong> $A = \int_a^b |f(x)|dx$ (sempre positiva)</li>
+                    <li><strong>Area tra due curve:</strong> $A = \int_a^b |f(x) - g(x)|dx$</li>
+                    <li>Se $f(x) \geq g(x)$ in $[a,b]$: $A = \int_a^b [f(x) - g(x)]dx$</li>
+                </ul>
+                
+                <h4>Metodi di integrazione</h4>
+                
+                <p><strong>1. Integrazione per sostituzione:</strong></p>
+                <div class="formula">
+                    $\int f(g(x))g'(x)dx = \int f(t)dt$ 
+                    <br>dove $t = g(x)$ e $dt = g'(x)dx$
+                </div>
+                
+                <p><strong>2. Integrazione per parti:</strong></p>
+                <div class="formula">
+                    $\int f(x)g'(x)dx = f(x)g(x) - \int f'(x)g(x)dx$
+                </div>
+                
+                <p><strong>3. Integrazione di funzioni razionali:</strong> Scomposizione in fratti semplici</p>
+                
+                <h4>Integrali generalizzati (impropri)</h4>
+                <ul>
+                    <li><strong>Intervallo illimitato:</strong> $\int_a^{+\infty} f(x)dx = \lim_{b \to +\infty} \int_a^b f(x)dx$</li>
+                    <li><strong>Integrando illimitato:</strong> Se $f$ ha una discontinuità in $c \in [a,b]$, calcolare i limiti separatamente</li>
+                </ul>
+                
+                <h4>Significato fisico dell'integrale</h4>
+                <ul>
+                    <li><strong>Spazio percorso:</strong> $s = \int_a^b v(t)dt$ (velocità integrata nel tempo)</li>
+                    <li><strong>Lavoro:</strong> $L = \int_a^b F(x)dx$ (forza integrata nello spostamento)</li>
+                    <li><strong>Volume di rotazione (asse x):</strong> $V = \pi\int_a^b [f(x)]^2 dx$</li>
+                </ul>
+            </div>
+            
+            <div class="theory-section">
+                <h3>📈 Probabilità e Statistica</h3>
+                
+                <h4>Probabilità classica</h4>
+                <div class="formula">
+                    $P(E) = \dfrac{\text{Casi favorevoli}}{\text{Casi possibili}}$
+                </div>
+                
+                <p><strong>Condizioni di applicabilità:</strong></p>
+                <ul>
+                    <li>Gli eventi elementari sono equiprobabili</li>
+                    <li>Il numero di casi possibili è finito</li>
+                </ul>
+                
+                <h4>Proprietà della probabilità (Assiomi di Kolmogorov)</h4>
+                <ul>
+                    <li>$0 \leq P(E) \leq 1$ per ogni evento $E$</li>
+                    <li>$P(\Omega) = 1$ (evento certo)</li>
+                    <li>$P(\emptyset) = 0$ (evento impossibile)</li>
+                    <li>$P(\overline{E}) = 1 - P(E)$ (evento complementare)</li>
+                </ul>
+                
+                <h4>Operazioni con eventi</h4>
+                <ul>
+                    <li><strong>Unione (OR):</strong> $P(A \cup B) = P(A) + P(B) - P(A \cap B)$</li>
+                    <li><strong>Eventi incompatibili (disgiunti):</strong> Se $A \cap B = \emptyset$, allora $P(A \cup B) = P(A) + P(B)$</li>
+                    <li><strong>Intersezione (AND) - Eventi indipendenti:</strong> $P(A \cap B) = P(A) \cdot P(B)$</li>
+                </ul>
+                
+                <h4>Probabilità condizionata</h4>
+                <div class="formula">
+                    $P(A|B) = \dfrac{P(A \cap B)}{P(B)}$ 
+                    <br>(probabilità di $A$ dato che $B$ si è verificato, con $P(B) > 0$)
+                </div>
+                
+                <p><strong>Teorema della probabilità composta:</strong></p>
+                <div class="formula">
+                    $P(A \cap B) = P(A|B) \cdot P(B) = P(B|A) \cdot P(A)$
+                </div>
+                
+                <p><strong>Teorema di Bayes:</strong></p>
+                <div class="formula">
+                    $P(A|B) = \dfrac{P(B|A) \cdot P(A)}{P(B)}$
+                </div>
+                
+                <h4>Statistica descrittiva</h4>
+                
+                <p><strong>Misure di posizione centrale:</strong></p>
+                <ul>
+                    <li><strong>Media aritmetica:</strong> $\bar{x} = \dfrac{1}{n}\sum_{i=1}^{n} x_i = \dfrac{x_1 + x_2 + ... + x_n}{n}$</li>
+                    <li><strong>Media ponderata:</strong> $\bar{x} = \dfrac{\sum_{i=1}^{n} x_i \cdot w_i}{\sum_{i=1}^{n} w_i}$ (dove $w_i$ sono i pesi)</li>
+                    <li><strong>Mediana:</strong> Valore centrale della distribuzione ordinata (divide i dati in due parti uguali)</li>
+                    <li><strong>Moda:</strong> Valore più frequente nella distribuzione</li>
+                </ul>
+                
+                <p><strong>Misure di dispersione:</strong></p>
+                <ul>
+                    <li><strong>Range (campo di variazione):</strong> $R = x_{\max} - x_{\min}$</li>
+                    <li><strong>Scarto medio assoluto:</strong> $\dfrac{1}{n}\sum_{i=1}^{n}|x_i - \bar{x}|$</li>
+                    <li><strong>Varianza:</strong> $\sigma^2 = \dfrac{1}{n}\sum_{i=1}^{n}(x_i - \bar{x})^2$</li>
+                    <li><strong>Deviazione standard:</strong> $\sigma = \sqrt{\sigma^2}$</li>
+                    <li><strong>Coefficiente di variazione:</strong> $CV = \dfrac{\sigma}{\bar{x}} \times 100\%$</li>
+                </ul>
+                
+                <p><strong>Quartili e percentili:</strong></p>
+                <ul>
+                    <li><strong>Primo quartile ($Q_1$):</strong> Valore che lascia il 25% dei dati a sinistra</li>
+                    <li><strong>Secondo quartile ($Q_2$):</strong> Mediana (50%)</li>
+                    <li><strong>Terzo quartile ($Q_3$):</strong> Valore che lascia il 75% dei dati a sinistra</li>
+                    <li><strong>Scarto interquartile:</strong> $IQR = Q_3 - Q_1$</li>
+                </ul>
+                
+                <h4>Percentuali - Formule pratiche</h4>
+                <div class="formula">
+                    <strong>Calcolare il $p\%$ di $N$:</strong> $\dfrac{p}{100} \times N$
+                </div>
+                <div class="formula">
+                    <strong>Quale percentuale è $A$ di $B$?:</strong> $\dfrac{A}{B} \times 100\%$
+                </div>
+                <div class="formula">
+                    <strong>$A$ è il $p\%$ di quale numero?:</strong> $\dfrac{A \times 100}{p}$
+                </div>
+                <div class="formula">
+                    <strong>Aumento del $p\%$:</strong> $N \times \left(1 + \dfrac{p}{100}\right)$
+                </div>
+                <div class="formula">
+                    <strong>Diminuzione del $p\%$:</strong> $N \times \left(1 - \dfrac{p}{100}\right)$
+                </div>
+                
+                <h4>Rappresentazioni grafiche</h4>
+                <ul>
+                    <li><strong>Diagramma a barre:</strong> Per dati qualitativi o quantitativi discreti</li>
+                    <li><strong>Istogramma:</strong> Per dati quantitativi continui (suddivisi in classi)</li>
+                    <li><strong>Diagramma a torta (aerogramma):</strong> Per visualizzare percentuali/proporzioni</li>
+                    <li><strong>Box plot:</strong> Visualizza quartili, mediana e valori estremi</li>
+                    <li><strong>Diagramma a dispersione:</strong> Per relazioni tra due variabili</li>
+                </ul>
+            </div>
+            
+            <div class="theory-section">
+                <h3>🔢 Equazioni e Disequazioni</h3>
+                
+                <h4>Equazioni di primo grado</h4>
+                <div class="formula">
+                    $ax + b = 0$
+                    <br><br>
+                    <strong>Soluzione:</strong> $x = -\dfrac{b}{a}$ (se $a \neq 0$)
+                </div>
+                
+                <ul>
+                    <li>Se $a = 0$ e $b = 0$: equazione indeterminata (infinite soluzioni)</li>
+                    <li>Se $a = 0$ e $b \neq 0$: equazione impossibile (nessuna soluzione)</li>
+                </ul>
+                
+                <h4>Equazioni di secondo grado</h4>
+                <div class="formula">
+                    $ax^2 + bx + c = 0$ (con $a \neq 0$)
+                    <br><br>
+                    <strong>Formula risolutiva:</strong> $x_{1,2} = \dfrac{-b \pm \sqrt{b^2 - 4ac}}{2a}$
+                </div>
+                
+                <p><strong>Discriminante:</strong> $\Delta = b^2 - 4ac$</p>
+                <ul>
+                    <li>$\Delta > 0$: due soluzioni reali distinte</li>
+                    <li>$\Delta = 0$: una soluzione reale (doppia/coincidente): $x = -\dfrac{b}{2a}$</li>
+                    <li>$\Delta < 0$: nessuna soluzione reale (due soluzioni complesse coniugate)</li>
+                </ul>
+                
+                <p><strong>Formula ridotta (quando $b$ è pari, $b = 2b'$):</strong></p>
+                <div class="formula">
+                    $x_{1,2} = \dfrac{-b' \pm \sqrt{b'^2 - ac}}{a}$
+                </div>
+                
+                <p><strong>Equazioni incomplete:</strong></p>
+                <ul>
+                    <li><strong>Pura</strong> ($b = 0$): $ax^2 + c = 0$ → $x = \pm\sqrt{-\dfrac{c}{a}}$ (se $-\dfrac{c}{a} \geq 0$)</li>
+                    <li><strong>Spuria</strong> ($c = 0$): $ax^2 + bx = 0$ → $x(ax + b) = 0$ → $x_1 = 0$, $x_2 = -\dfrac{b}{a}$</li>
+                    <li><strong>Monomia</strong> ($b = c = 0$): $ax^2 = 0$ → $x = 0$ (soluzione doppia)</li>
+                </ul>
+                
+                <p><strong>Relazioni di Viète (Formule di Viète):</strong></p>
+                <ul>
+                    <li>Somma delle radici: $x_1 + x_2 = -\dfrac{b}{a}$</li>
+                    <li>Prodotto delle radici: $x_1 \cdot x_2 = \dfrac{c}{a}$</li>
+                    <li>Scomposizione: $ax^2 + bx + c = a(x - x_1)(x - x_2)$</li>
+                </ul>
+                
+                <h4>Equazioni di grado superiore al secondo</h4>
+                <ul>
+                    <li><strong>Equazioni binomie:</strong> $x^n = k$ → $x = \sqrt[n]{k}$ (considerare tutte le radici $n$-esime)</li>
+                    <li><strong>Equazioni biquadratiche:</strong> $ax^4 + bx^2 + c = 0$ 
+                        <br>Porre $t = x^2$ e risolvere $at^2 + bt + c = 0$, poi $x = \pm\sqrt{t}$</li>
+                    <li><strong>Equazioni risolvibili per scomposizione:</strong> Raccogliere a fattor comune o applicare prodotti notevoli</li>
+                    <li><strong>Teorema di Ruffini:</strong> Per verificare se $(x - a)$ è un fattore del polinomio</li>
+                </ul>
+                
+                <h4>Equazioni irrazionali</h4>
+                <div class="formula">
+                    $\sqrt{f(x)} = g(x)$
+                    <br><br>
+                    <strong>Condizioni:</strong>
+                    <br>1. $f(x) \geq 0$ (condizione di esistenza)
+                    <br>2. $g(x) \geq 0$ (per avere soluzioni)
+                    <br>3. Elevare al quadrato: $f(x) = [g(x)]^2$
+                    <br>4. Verificare le soluzioni (possono essere estranee)
+                </div>
+                
+                <p><strong>Caso con indice pari:</strong> $\sqrt[n]{f(x)} = g(x)$ richiede $f(x) \geq 0$ e $g(x) \geq 0$</p>
+                <p><strong>Caso con indice dispari:</strong> $\sqrt[n]{f(x)} = g(x)$ non ha restrizioni di segno</p>
+                
+                <h4>Equazioni esponenziali</h4>
+                <div class="formula">
+                    $a^{f(x)} = a^{g(x)}$ → $f(x) = g(x)$ 
+                    <br>(con $a > 0$ e $a \neq 1$)
+                </div>
+                
+                <p><strong>Metodi risolutivi:</strong></p>
+                <ul>
+                    <li><strong>Riduzione alla stessa base:</strong> $2^x = 8$ → $2^x = 2^3$ → $x = 3$</li>
+                    <li><strong>Sostituzione:</strong> Per equazioni come $4^x - 3 \cdot 2^x + 2 = 0$, porre $t = 2^x$</li>
+                    <li><strong>Logaritmi:</strong> $a^x = b$ → $x = \log_a b = \dfrac{\ln b}{\ln a}$</li>
+                </ul>
+                
+                <h4>Equazioni logaritmiche</h4>
+                <div class="formula">
+                    $\log_a f(x) = \log_a g(x)$ → $f(x) = g(x)$
+                    <br>con $f(x) > 0$ e $g(x) > 0$
+                </div>
+                
+                <p><strong>Proprietà dei logaritmi:</strong></p>
+                <ul>
+                    <li>$\log_a(xy) = \log_a x + \log_a y$</li>
+                    <li>$\log_a\left(\dfrac{x}{y}\right) = \log_a x - \log_a y$</li>
+                    <li>$\log_a(x^n) = n\log_a x$</li>
+                    <li>$\log_a b = \dfrac{\log_c b}{\log_c a}$ (cambio di base)</li>
+                    <li>$a^{\log_a x} = x$</li>
+                    <li>$\log_a a^x = x$</li>
+                </ul>
+                
+                <h4>Sistemi di equazioni</h4>
+                
+                <p><strong>Metodi di risoluzione per sistemi lineari:</strong></p>
+                <ul>
+                    <li><strong>Sostituzione:</strong> Ricavare una variabile da un'equazione e sostituirla nell'altra</li>
+                    <li><strong>Riduzione (o eliminazione):</strong> Sommare o sottrarre le equazioni per eliminare una variabile</li>
+                    <li><strong>Confronto:</strong> Isolare la stessa variabile in entrambe le equazioni e uguagliare</li>
+                    <li><strong>Metodo di Cramer:</strong> Usare i determinanti (per sistemi con coefficienti numerici)</li>
+                </ul>
+                
+                <p><strong>Regola di Cramer (sistema 2×2):</strong></p>
+                <div class="formula">
+                    $\begin{cases} ax + by = e \\ cx + dy = f \end{cases}$
+                    <br><br>
+                    $x = \dfrac{\begin{vmatrix} e & b \\ f & d \end{vmatrix}}{\begin{vmatrix} a & b \\ c & d \end{vmatrix}}$, 
+                    $y = \dfrac{\begin{vmatrix} a & e \\ c & f \end{vmatrix}}{\begin{vmatrix} a & b \\ c & d \end{vmatrix}}$
+                </div>
+                
+                <h4>Disequazioni di primo grado</h4>
+                <div class="formula">
+                    $ax + b > 0$
+                </div>
+                <ul>
+                    <li>Se $a > 0$: $x > -\dfrac{b}{a}$</li>
+                    <li>Se $a < 0$: $x < -\dfrac{b}{a}$ (il verso cambia!)</li>
+                    <li>Se $a = 0$ e $b > 0$: disequazione sempre vera ($\mathbb{R}$)</li>
+                    <li>Se $a = 0$ e $b \leq 0$: disequazione sempre falsa ($\emptyset$)</li>
+                </ul>
+                
+                <h4>Disequazioni di secondo grado</h4>
+                <div class="formula">
+                    $ax^2 + bx + c > 0$ (con $a \neq 0$)
+                </div>
+                
+                <p><strong>Studio del segno della parabola:</strong></p>
+                <ul>
+                    <li><strong>Se $a > 0$ (parabola concava verso l'alto):</strong>
+                        <ul>
+                            <li>$\Delta > 0$: positiva esternamente alle radici ($x < x_1$ o $x > x_2$)</li>
+                            <li>$\Delta = 0$: positiva ovunque tranne nel vertice ($x \neq x_V$)</li>
+                            <li>$\Delta < 0$: sempre positiva ($\mathbb{R}$)</li>
+                        </ul>
+                    </li>
+                    <li><strong>Se $a < 0$ (parabola concava verso il basso):</strong>
+                        <ul>
+                            <li>$\Delta > 0$: positiva internamente alle radici ($x_1 < x < x_2$)</li>
+                            <li>$\Delta = 0$: mai positiva ($\emptyset$)</li>
+                            <li>$\Delta < 0$: mai positiva ($\emptyset$)</li>
+                        </ul>
+                    </li>
+                </ul>
+                
+                <h4>Disequazioni con valore assoluto</h4>
+                <div class="formula">
+                    $|f(x)| < k$ (con $k > 0$) → $-k < f(x) < k$
+                </div>
+                <div class="formula">
+                    $|f(x)| > k$ (con $k > 0$) → $f(x) < -k$ oppure $f(x) > k$
+                </div>
+                <div class="formula">
+                    $|f(x)| < |g(x)|$ → $[f(x)]^2 < [g(x)]^2$
+                </div>
+                
+                <h4>Disequazioni fratte</h4>
+                <div class="formula">
+                    $\dfrac{N(x)}{D(x)} > 0$
+                </div>
+                <p><strong>Metodo:</strong> Studio del segno di numeratore e denominatore separatamente, poi tabella dei segni</p>
+                <ul>
+                    <li>Il denominatore deve essere sempre $\neq 0$</li>
+                    <li>Si studia il segno del prodotto $N(x) \cdot D(x)$</li>
+                    <li>Le soluzioni sono gli intervalli dove il rapporto ha il segno richiesto</li>
+                </ul>
+                
+                <h4>Sistemi di disequazioni</h4>
+                <p>La soluzione è l'<strong>intersezione</strong> delle soluzioni delle singole disequazioni</p>
+                <ul>
+                    <li>Risolvere ogni disequazione singolarmente</li>
+                    <li>Rappresentare le soluzioni su una retta orientata</li>
+                    <li>L'insieme soluzione è dato dai valori che soddisfano tutte le disequazioni</li>
+                </ul>
+            </div>
+            
+            <div class="theory-section">
+                <h3>🔺 Trigonometria</h3>
+                
+                <h4>Definizioni nel triangolo rettangolo</h4>
+                <p>In un triangolo rettangolo con ipotenusa $i$ e angolo acuto $\alpha$:</p>
+                <div class="formula">
+                    $\sin \alpha = \dfrac{\text{cateto opposto}}{i}$
+                </div>
+                <div class="formula">
+                    $\cos \alpha = \dfrac{\text{cateto adiacente}}{i}$
+                </div>
+                <div class="formula">
+                    $\tan \alpha = \dfrac{\sin \alpha}{\cos \alpha} = \dfrac{\text{cateto opposto}}{\text{cateto adiacente}}$
+                </div>
+                
+                <h4>Circonferenza goniometrica</h4>
+                <p>Circonferenza di raggio 1 con centro nell'origine. Un angolo $\alpha$ corrisponde ad un punto $P(\cos\alpha, \sin\alpha)$</p>
+                
+                <h4>Relazioni fondamentali</h4>
+                <div class="formula">
+                    <strong>Prima relazione fondamentale:</strong>
+                    <br>$\sin^2 \alpha + \cos^2 \alpha = 1$
+                </div>
+                <div class="formula">
+                    $1 + \tan^2 \alpha = \dfrac{1}{\cos^2 \alpha}$
+                </div>
+                <div class="formula">
+                    $1 + \cot^2 \alpha = \dfrac{1}{\sin^2 \alpha}$
+                </div>
+                <div class="formula">
+                    $\tan \alpha \cdot \cot \alpha = 1$
+                </div>
+                
+                <h4>Angoli notevoli</h4>
+                <table>
+                    <tr>
+                        <th>Gradi</th>
+                        <th>Radianti</th>
+                        <th>$\sin$</th>
+                        <th>$\cos$</th>
+                        <th>$\tan$</th>
+                    </tr>
+                    <tr>
+                        <td>$0°$</td>
+                        <td>$0$</td>
+                        <td>$0$</td>
+                        <td>$1$</td>
+                        <td>$0$</td>
+                    </tr>
+                    <tr>
+                        <td>$30°$</td>
+                        <td>$\dfrac{\pi}{6}$</td>
+                        <td>$\dfrac{1}{2}$</td>
+                        <td>$\dfrac{\sqrt{3}}{2}$</td>
+                        <td>$\dfrac{\sqrt{3}}{3}$</td>
+                    </tr>
+                    <tr>
+                        <td>$45°$</td>
+                        <td>$\dfrac{\pi}{4}$</td>
+                        <td>$\dfrac{\sqrt{2}}{2}$</td>
+                        <td>$\dfrac{\sqrt{2}}{2}$</td>
+                        <td>$1$</td>
+                    </tr>
+                    <tr>
+                        <td>$60°$</td>
+                        <td>$\dfrac{\pi}{3}$</td>
+                        <td>$\dfrac{\sqrt{3}}{2}$</td>
+                        <td>$\dfrac{1}{2}$</td>
+                        <td>$\sqrt{3}$</td>
+                    </tr>
+                    <tr>
+                        <td>$90°$</td>
+                        <td>$\dfrac{\pi}{2}$</td>
+                        <td>$1$</td>
+                        <td>$0$</td>
+                        <td>non def.</td>
+                    </tr>
+                    <tr>
+                        <td>$120°$</td>
+                        <td>$\dfrac{2\pi}{3}$</td>
+                        <td>$\dfrac{\sqrt{3}}{2}$</td>
+                        <td>$-\dfrac{1}{2}$</td>
+                        <td>$-\sqrt{3}$</td>
+                    </tr>
+                    <tr>
+                        <td>$135°$</td>
+                        <td>$\dfrac{3\pi}{4}$</td>
+                        <td>$\dfrac{\sqrt{2}}{2}$</td>
+                        <td>$-\dfrac{\sqrt{2}}{2}$</td>
+                        <td>$-1$</td>
+                    </tr>
+                    <tr>
+                        <td>$150°$</td>
+                        <td>$\dfrac{5\pi}{6}$</td>
+                        <td>$\dfrac{1}{2}$</td>
+                        <td>$-\dfrac{\sqrt{3}}{2}$</td>
+                        <td>$-\dfrac{\sqrt{3}}{3}$</td>
+                    </tr>
+                    <tr>
+                        <td>$180°$</td>
+                        <td>$\pi$</td>
+                        <td>$0$</td>
+                        <td>$-1$</td>
+                        <td>$0$</td>
+                    </tr>
+                    <tr>
+                        <td>$270°$</td>
+                        <td>$\dfrac{3\pi}{2}$</td>
+                        <td>$-1$</td>
+                        <td>$0$</td>
+                        <td>non def.</td>
+                    </tr>
+                    <tr>
+                        <td>$360°$</td>
+                        <td>$2\pi$</td>
+                        <td>$0$</td>
+                        <td>$1$</td>
+                        <td>$0$</td>
+                    </tr>
+                </table>
+                
+                <h4>Segni delle funzioni trigonometriche nei quadranti</h4>
+                <table>
+                    <tr>
+                        <th>Quadrante</th>
+                        <th>Intervallo</th>
+                        <th>$\sin$</th>
+                        <th>$\cos$</th>
+                        <th>$\tan$</th>
+                    </tr>
+                    <tr>
+                        <td>I</td>
+                        <td>$0° < \alpha < 90°$</td>
+                        <td>$+$</td>
+                        <td>$+$</td>
+                        <td>$+$</td>
+                    </tr>
+                    <tr>
+                        <td>II</td>
+                        <td>$90° < \alpha < 180°$</td>
+                        <td>$+$</td>
+                        <td>$-$</td>
+                        <td>$-$</td>
+                    </tr>
+                    <tr>
+                        <td>III</td>
+                        <td>$180° < \alpha < 270°$</td>
+                        <td>$-$</td>
+                        <td>$-$</td>
+                        <td>$+$</td>
+                    </tr>
+                    <tr>
+                        <td>IV</td>
+                        <td>$270° < \alpha < 360°$</td>
+                        <td>$-$</td>
+                        <td>$+$</td>
+                        <td>$-$</td>
+                    </tr>
+                </table>
+                
+                <h4>Formule di addizione e sottrazione</h4>
+                <div class="formula">
+                    $\sin(\alpha \pm \beta) = \sin \alpha \cos \beta \pm \cos \alpha \sin \beta$
+                </div>
+                <div class="formula">
+                    $\cos(\alpha \pm \beta) = \cos \alpha \cos \beta \mp \sin \alpha \sin \beta$
+                </div>
+                <div class="formula">
+                    $\tan(\alpha \pm \beta) = \dfrac{\tan \alpha \pm \tan \beta}{1 \mp \tan \alpha \tan \beta}$
+                </div>
+                
+                <h4>Formule di duplicazione</h4>
+                <div class="formula">
+                    $\sin(2\alpha) = 2\sin \alpha \cos \alpha$
+                </div>
+                <div class="formula">
+                    $\cos(2\alpha) = \cos^2 \alpha - \sin^2 \alpha = 2\cos^2 \alpha - 1 = 1 - 2\sin^2 \alpha$
+                </div>
+                <div class="formula">
+                    $\tan(2\alpha) = \dfrac{2\tan \alpha}{1 - \tan^2 \alpha}$
+                </div>
+                
+                <h4>Formule di bisezione</h4>
+                <div class="formula">
+                    $\sin\left(\dfrac{\alpha}{2}\right) = \pm\sqrt{\dfrac{1 - \cos \alpha}{2}}$
+                </div>
+                <div class="formula">
+                    $\cos\left(\dfrac{\alpha}{2}\right) = \pm\sqrt{\dfrac{1 + \cos \alpha}{2}}$
+                </div>
+                <div class="formula">
+                    $\tan\left(\dfrac{\alpha}{2}\right) = \dfrac{\sin \alpha}{1 + \cos \alpha} = \dfrac{1 - \cos \alpha}{\sin \alpha}$
+                </div>
+                
+                <h4>Formule di prostaferesi</h4>
+                <p>(Trasformano somme in prodotti)</p>
+                <div class="formula">
+                    $\sin p + \sin q = 2\sin\left(\dfrac{p+q}{2}\right)\cos\left(\dfrac{p-q}{2}\right)$
+                </div>
+                <div class="formula">
+                    $\sin p - \sin q = 2\cos\left(\dfrac{p+q}{2}\right)\sin\left(\dfrac{p-q}{2}\right)$
+                </div>
+                <div class="formula">
+                    $\cos p + \cos q = 2\cos\left(\dfrac{p+q}{2}\right)\cos\left(\dfrac{p-q}{2}\right)$
+                </div>
+                <div class="formula">
+                    $\cos p - \cos q = -2\sin\left(\dfrac{p+q}{2}\right)\sin\left(\dfrac{p-q}{2}\right)$
+                </div>
+                
+                <h4>Formule di Werner</h4>
+                <p>(Trasformano prodotti in somme)</p>
+                <div class="formula">
+                    $\sin \alpha \cos \beta = \dfrac{1}{2}[\sin(\alpha+\beta) + \sin(\alpha-\beta)]$
+                </div>
+                <div class="formula">
+                    $\cos \alpha \cos \beta = \dfrac{1}{2}[\cos(\alpha+\beta) + \cos(\alpha-\beta)]$
+                </div>
+                <div class="formula">
+                    $\sin \alpha \sin \beta = -\dfrac{1}{2}[\cos(\alpha+\beta) - \cos(\alpha-\beta)]$
+                </div>
+                
+                <h4>Equazioni trigonometriche elementari</h4>
+                
+                <p><strong>1. $\sin x = k$</strong></p>
+                <ul>
+                    <li>Soluzioni solo se $-1 \leq k \leq 1$</li>
+                    <li>Se $k = 1$: $x = \dfrac{\pi}{2} + 2k\pi$</li>
+                    <li>Se $k = -1$: $x = -\dfrac{\pi}{2} + 2k\pi$</li>
+                    <li>Se $k = 0$: $x = k\pi$</li>
+                    <li>Caso generale: $x = \arcsin k + 2k\pi$ oppure $x = \pi - \arcsin k + 2k\pi$</li>
+                </ul>
+                
+                <p><strong>2. $\cos x = k$</strong></p>
+                <ul>
+                    <li>Soluzioni solo se $-1 \leq k \leq 1$</li>
+                    <li>Se $k = 1$: $x = 2k\pi$</li>
+                    <li>Se $k = -1$: $x = \pi + 2k\pi$</li>
+                    <li>Se $k = 0$: $x = \dfrac{\pi}{2} + k\pi$</li>
+                    <li>Caso generale: $x = \pm\arccos k + 2k\pi$</li>
+                </ul>
+                
+                <p><strong>3. $\tan x = k$</strong></p>
+                <ul>
+                    <li>Soluzioni per ogni $k \in \mathbb{R}$</li>
+                    <li>$x = \arctan k + k\pi$ (con $k \in \mathbb{Z}$)</li>
+                </ul>
+                
+                <h4>Teoremi sui triangoli</h4>
+                
+                <p><strong>Teorema dei seni:</strong></p>
+                <div class="formula">
+                    $\dfrac{a}{\sin A} = \dfrac{b}{\sin B} = \dfrac{c}{\sin C} = 2R$
+                    <br>(dove $R$ è il raggio della circonferenza circoscritta)
+                </div>
+                
+                <p><strong>Teorema del coseno (o di Carnot):</strong></p>
+                <div class="formula">
+                    $a^2 = b^2 + c^2 - 2bc\cos A$
+                </div>
+                <p>Analogamente per $b^2$ e $c^2$. Generalizza il teorema di Pitagora.</p>
+                
+                <p><strong>Area del triangolo:</strong></p>
+                <div class="formula">
+                    $A = \dfrac{1}{2}bc\sin A = \dfrac{1}{2}ac\sin B = \dfrac{1}{2}ab\sin C$
+                </div>
+                
+                <h4>Conversione gradi-radianti</h4>
+                <div class="formula">
+                    $\text{radianti} = \text{gradi} \times \dfrac{\pi}{180}$
+                </div>
+                <div class="formula">
+                    $\text{gradi} = \text{radianti} \times \dfrac{180}{\pi}$
+                </div>
+                
+                <p><strong>Angolo giro:</strong> $360° = 2\pi$ rad</p>
+                <p><strong>Angolo piatto:</strong> $180° = \pi$ rad</p>
+                <p><strong>Angolo retto:</strong> $90° = \dfrac{\pi}{2}$ rad</p>
+            </div>
+            
+            <div class="theory-section">
+                <h3>📏 Geometria Piana</h3>
+                
+                <h4>Triangoli</h4>
+                <ul>
+                    <li><strong>Perimetro:</strong> $P = a + b + c$</li>
+                    <li><strong>Area (base per altezza):</strong> $A = \dfrac{b \times h}{2}$</li>
+                    <li><strong>Formula di Erone:</strong> $A = \sqrt{p(p-a)(p-b)(p-c)}$ dove $p = \dfrac{a+b+c}{2}$ (semiperimetro)</li>
+                    <li><strong>Teorema di Pitagora:</strong> $a^2 + b^2 = c^2$ (solo triangoli rettangoli, $c$ = ipotenusa)</li>
+                    <li><strong>Altezza relativa all'ipotenusa:</strong> $h = \dfrac{a \times b}{c}$</li>
+                    <li><strong>Proiezioni dei cateti:</strong> $a^2 = c \cdot p_a$ e $b^2 = c \cdot p_b$</li>
+                </ul>
+                
+                <p><strong>Classificazione per lati:</strong></p>
+                <ul>
+                    <li><strong>Equilatero:</strong> Tre lati uguali (angoli di 60°)</li>
+                    <li><strong>Isoscele:</strong> Due lati uguali</li>
+                    <li><strong>Scaleno:</strong> Tre lati diversi</li>
+                </ul>
+                
+                <p><strong>Classificazione per angoli:</strong></p>
+                <ul>
+                    <li><strong>Acutangolo:</strong> Tre angoli acuti (< 90°)</li>
+                    <li><strong>Rettangolo:</strong> Un angolo retto (= 90°)</li>
+                    <li><strong>Ottusangolo:</strong> Un angolo ottuso (> 90°)</li>
+                </ul>
+                
+                <h4>Quadrilateri</h4>
+                <table>
+                    <tr>
+                        <th>Figura</th>
+                        <th>Proprietà</th>
+                        <th>Perimetro</th>
+                        <th>Area</th>
+                    </tr>
+                    <tr>
+                        <td><strong>Quadrato</strong></td>
+                        <td>4 lati uguali, 4 angoli retti</td>
+                        <td>$4l$</td>
+                        <td>$l^2$ o $\dfrac{d^2}{2}$</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Rettangolo</strong></td>
+                        <td>Lati opposti uguali, 4 angoli retti</td>
+                        <td>$2(b + h)$</td>
+                        <td>$b \times h$</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Rombo</strong></td>
+                        <td>4 lati uguali, angoli opposti uguali</td>
+                        <td>$4l$</td>
+                        <td>$\dfrac{d_1 \times d_2}{2}$</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Parallelogramma</strong></td>
+                        <td>Lati opposti paralleli e uguali</td>
+                        <td>$2(a + b)$</td>
+                        <td>$b \times h$</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Trapezio</strong></td>
+                        <td>Due lati paralleli (basi)</td>
+                        <td>$B + b + l_1 + l_2$</td>
+                        <td>$\dfrac{(B + b) \times h}{2}$</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Trapezio isoscele</strong></td>
+                        <td>Lati obliqui uguali</td>
+                        <td>$B + b + 2l$</td>
+                        <td>$\dfrac{(B + b) \times h}{2}$</td>
+                    </tr>
+                </table>
+                
+                <h4>Circonferenza e cerchio</h4>
+                <ul>
+                    <li><strong>Circonferenza (perimetro):</strong> $C = 2\pi r$ oppure $C = \pi d$</li>
+                    <li><strong>Area del cerchio:</strong> $A = \pi r^2$</li>
+                    <li><strong>Lunghezza arco:</strong> $l = \dfrac{\alpha}{360°} \times 2\pi r$ (con $\alpha$ in gradi) oppure $l = \alpha r$ (con $\alpha$ in radianti)</li>
+                    <li><strong>Area settore circolare:</strong> $A = \dfrac{\alpha}{360°} \times \pi r^2$ oppure $A = \dfrac{1}{2}\alpha r^2$ (radianti)</li>
+                    <li><strong>Area corona circolare:</strong> $A = \pi(R^2 - r^2)$</li>
+                </ul>
+                
+                <p><strong>Teoremi sulla circonferenza:</strong></p>
+                <ul>
+                    <li>Diametro perpendicolare a una corda la divide a metà</li>
+                    <li>Angolo al centro è doppio dell'angolo alla circonferenza che insiste sullo stesso arco</li>
+                    <li>Angoli alla circonferenza che insistono sullo stesso arco sono uguali</li>
+                    <li>Angolo inscritto in una semicirconferenza è retto</li>
+                </ul>
+                
+                <h4>Poligoni regolari</h4>
+                <p>Poligono con tutti i lati e tutti gli angoli uguali</p>
+                <ul>
+                    <li><strong>Numero lati:</strong> $n$</li>
+                    <li><strong>Somma angoli interni:</strong> $(n-2) \times 180°$</li>
+                    <li><strong>Angolo interno:</strong> $\dfrac{(n-2) \times 180°}{n}$</li>
+                    <li><strong>Angolo esterno:</strong> $\dfrac{360°}{n}$</li>
+                    <li><strong>Apotema ($a$):</strong> Distanza dal centro al lato</li>
+                    <li><strong>Area:</strong> $A = \dfrac{P \times a}{2}$ (dove $P$ = perimetro)</li>
+                </ul>
+                
+                <h4>Teorema di Talete</h4>
+                <p>Un fascio di rette parallele determina su due trasversali segmenti proporzionali:</p>
+                <div class="formula">
+                    $\dfrac{AB}{BC} = \dfrac{A'B'}{B'C'}$
+                </div>
+                
+                <h4>Similitudine</h4>
+                <p>Due figure sono simili se hanno la stessa forma ma dimensioni diverse</p>
+                <ul>
+                    <li><strong>Rapporto di similitudine:</strong> $k = \dfrac{l'}{l}$ (rapporto tra lati corrispondenti)</li>
+                    <li><strong>Rapporto delle aree:</strong> $\dfrac{A'}{A} = k^2$</li>
+                    <li><strong>Triangoli simili:</strong> Hanno angoli corrispondenti uguali e lati proporzionali</li>
+                </ul>
+                
+                <p><strong>Criteri di similitudine dei triangoli:</strong></p>
+                <ul>
+                    <li><strong>AAA:</strong> Due triangoli con angoli corrispondenti uguali</li>
+                    <li><strong>LAL:</strong> Due lati proporzionali e l'angolo compreso uguale</li>
+                    <li><strong>LLL:</strong> Tre lati proporzionali</li>
+                </ul>
+            </div>
+            
+            <div class="theory-section">
+                <h3>📦 Geometria Solida</h3>
+                
+                <h4>Poliedri</h4>
+                <table>
+                    <tr>
+                        <th>Solido</th>
+                        <th>Volume</th>
+                        <th>Superficie totale</th>
+                    </tr>
+                    <tr>
+                        <td><strong>Cubo</strong> (spigolo $l$)</td>
+                        <td>$V = l^3$</td>
+                        <td>$S = 6l^2$</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Parallelepipedo</strong><br>rettangolo $(a, b, c)$</td>
+                        <td>$V = a \times b \times c$</td>
+                        <td>$S = 2(ab + ac + bc)$</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Prisma retto</strong></td>
+                        <td>$V = A_{\text{base}} \times h$</td>
+                        <td>$S = S_{\text{lat}} + 2A_{\text{base}}$</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Piramide</strong></td>
+                        <td>$V = \dfrac{1}{3}A_{\text{base}} \times h$</td>
+                        <td>$S = S_{\text{lat}} + A_{\text{base}}$</td>
+                    </tr>
+                </table>
+                
+                <p><strong>Diagonale del parallelepipedo:</strong> $d = \sqrt{a^2 + b^2 + c^2}$</p>
+                <p><strong>Superficie laterale prisma:</strong> $S_{\text{lat}} = P_{\text{base}} \times h$</p>
+                
+                <h4>Solidi di rotazione</h4>
+                <table>
+                    <tr>
+                        <th>Solido</th>
+                        <th>Volume</th>
+                        <th>Superficie totale</th>
+                    </tr>
+                    <tr>
+                        <td><strong>Cilindro</strong><br>(raggio $r$, altezza $h$)</td>
+                        <td>$V = \pi r^2 h$</td>
+                        <td>$S = 2\pi r h + 2\pi r^2$</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Cono</strong><br>(raggio $r$, altezza $h$)</td>
+                        <td>$V = \dfrac{1}{3}\pi r^2 h$</td>
+                        <td>$S = \pi r l + \pi r^2$<br>($l$ = apotema)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Sfera</strong><br>(raggio $r$)</td>
+                        <td>$V = \dfrac{4}{3}\pi r^3$</td>
+                        <td>$S = 4\pi r^2$</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Calotta sferica</strong><br>(altezza $h$)</td>
+                        <td>$V = \dfrac{\pi h^2(3r-h)}{3}$</td>
+                        <td>$S = 2\pi rh$</td>
+                    </tr>
+                </table>
+                
+                <p><strong>Apotema del cono:</strong> $l = \sqrt{r^2 + h^2}$ (teorema di Pitagora)</p>
+                <p><strong>Superficie laterale cilindro:</strong> $S_{\text{lat}} = 2\pi r h$</p>
+                <p><strong>Superficie laterale cono:</strong> $S_{\text{lat}} = \pi r l$</p>
+                
+                <h4>Relazioni tra volumi</h4>
+                <ul>
+                    <li>Volume piramide = $\dfrac{1}{3}$ Volume prisma (stessa base e altezza)</li>
+                    <li>Volume cono = $\dfrac{1}{3}$ Volume cilindro (stesso raggio e altezza)</li>
+                    <li>Volume sfera = $\dfrac{2}{3}$ Volume cilindro circoscritto</li>
+                </ul>
+            </div>
+            
+            <div class="theory-section">
+                <h3>💡 Consigli per le Prove INVALSI</h3>
+                
+                <h4>✅ Strategie generali</h4>
+                <ul>
+                    <li>📖 <strong>Leggi attentamente</strong> tutto il testo prima di rispondere</li>
+                    <li>🔍 <strong>Identifica</strong> i dati forniti e ciò che viene richiesto</li>
+                    <li>✏️ <strong>Fai uno schizzo</strong> o un disegno quando è utile (geometria, grafici)</li>
+                    <li>📏 <strong>Verifica le unità di misura</strong> (metri, centimetri, litri, ecc.)</li>
+                    <li>🧮 <strong>Controlla la ragionevolezza</strong> del risultato (es: un'età non può essere negativa)</li>
+                    <li>❌ <strong>Elimina le opzioni palesemente errate</strong> se non sai rispondere</li>
+                    <li>⏰ <strong>Gestisci bene il tempo:</strong> non bloccarti su un esercizio difficile</li>
+                    <li>✓ <strong>Rispondi a tutte le domande:</strong> non ci sono penalità per risposte sbagliate</li>
+                </ul>
+                
+                <h4>⚠️ Errori da evitare</h4>
+                <ul>
+                    <li>✗ Non leggere completamente il testo dell'esercizio</li>
+                    <li>✗ Confondere formule simili (es: area e perimetro)</li>
+                    <li>✗ Non fare attenzione ai segni (positivo/negativo)</li>
+                    <li>✗ Sbagliare i calcoli elementari per troppa fretta</li>
+                    <li>✗ Non verificare il dominio delle funzioni (radicali, frazioni, logaritmi)</li>
+                    <li>✗ Confondere area geometrica con integrale definito (l'integrale può essere negativo!)</li>
+                    <li>✗ Non considerare tutti i vincoli del problema</li>
+                    <li>✗ Dimenticare di convertire le unità di misura quando necessario</li>
+                    <li>✗ Non verificare che le soluzioni trovate soddisfino le condizioni iniziali</li>
+                </ul>
+                
+                <h4>📝 Checklist prima della consegna</h4>
+                <ol>
+                    <li>✓ Ho risposto a tutte le domande?</li>
+                    <li>✓ Ho ricontrollato i calcoli critici?</li>
+                    <li>✓ Le risposte sono coerenti con le domande?</li>
+                    <li>✓ Ho considerato le unità di misura?</li>
+                    <li>✓ Ho verificato i segni nelle operazioni?</li>
+                    <li>✓ Ho rispettato i domini delle funzioni?</li>
+                    <li>✓ I risultati sono ragionevoli nel contesto del problema?</li>
+                </ol>
+                
+                <h4>🎯 Suggerimenti per argomento</h4>
+                
+                <p><strong>Geometria analitica:</strong></p>
+                <ul>
+                    <li>Disegna sempre un grafico approssimativo</li>
+                    <li>Ricorda: rette parallele hanno stesso $m$, perpendicolari hanno $m_1 \cdot m_2 = -1$</li>
+                </ul>
+                
+                <p><strong>Funzioni:</strong></p>
+                <ul>
+                    <li>Determina sempre il dominio prima di studiare la funzione</li>
+                    <li>Controlla i comportamenti agli estremi (limiti e asintoti)</li>
+                </ul>
+                
+                <p><strong>Integrali:</strong></p>
+                <ul>
+                    <li>Ricorda: integrale ≠ area se la funzione è negativa</li>
+                    <li>Area geometrica = valore assoluto dell'integrale</li>
+                </ul>
+                
+                <p><strong>Probabilità:</strong></p>
+                <ul>
+                    <li>Verifica che le probabilità siano comprese tra 0 e 1</li>
+                    <li>Eventi incompatibili: somma le probabilità</li>
+                    <li>Eventi indipendenti: moltiplica le probabilità</li>
+                </ul>
+                
+                <p><strong>Percentuali:</strong></p>
+                <ul>
+                    <li>Converti sempre in frazione: 20% = $\frac{20}{100} = 0.2$</li>
+                    <li>Attenzione a cosa rappresenta il 100%</li>
+                </ul>
+                
+                <h4>🔢 Formule da ricordare assolutamente</h4>
+                <ul>
+                    <li>Equazione di secondo grado: $x = \dfrac{-b \pm \sqrt{b^2-4ac}}{2a}$</li>
+                    <li>Pitagora: $a^2 + b^2 = c^2$</li>
+                    <li>Area cerchio: $\pi r^2$</li>
+                    <li>Volume sfera: $\dfrac{4}{3}\pi r^3$</li>
+                    <li>Teorema fondamentale calcolo integrale: $\int_a^b f(x)dx = F(b) - F(a)$</li>
+                    <li>Relazione fondamentale trigonometria: $\sin^2\alpha + \cos^2\alpha = 1$</li>
+                </ul>
+            </div>
+            
+        </div>
+    </div>
+    
+</body>
+</html>
